@@ -1,10 +1,13 @@
 import React from 'react'
-
+import Logo2 from '../../assets/Logo.png'
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg  " style={{ backgroundColor: "#8fdfc288"}}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">School Management System</a>
+        <a className="navbar-brand" href="#" style={{fontFamily:'fantasy' }}>
+          <img src={Logo2} alt="Logo"  style={{ width: "60px", height: "60px", marginRight: "10px" }}/>
+          School Management System
+          </a>
         <button
           className="navbar-toggler"
           type="button"
