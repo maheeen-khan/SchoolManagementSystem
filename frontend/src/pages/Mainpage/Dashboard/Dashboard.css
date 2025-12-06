@@ -1,0 +1,77 @@
+/* Main page container */
+.dash-container {
+  padding: 20px;
+}
+
+/* Title */
+.dash-title {
+  font-family: George;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.dash-icon {
+  margin-right: 10px;
+}
+
+/* Layout for left + right columns */
+.dash-layout {
+  display: flex;
+  gap: 20px;
+}
+
+/* LEFT COLUMN */
+.dash-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cards row */
+.dash-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+/* Box styling (for charts) */
+.dash-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* RIGHT COLUMN (Pie chart) */
+.dash-right {
+  flex: 1;
+  max-width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ======== RESPONSIVE MODE ========= */
+@media (max-width: 768px) {
+
+  /* Stack left + right */
+  .dash-layout {
+    flex-direction: column;
+  }
+
+  .dash-right {
+    max-width: 100%;
+  }
+
+  /* Cards stack */
+  .dash-cards {
+    flex-wrap: wrap;
+  }
+
+  .dash-cards > * {
+    min-width: 100%;
+  }
+}

@@ -1,17 +1,44 @@
 import React from 'react';
 
-function Cards() {
+function Cards({ heading, value, photo }) {
   return (
-    <div>
-      <div className="card text-white bg-primary mb-3" style={{ maxWidth: "18rem" }}>
-        <div className="card-header">Header</div>
-        <div className="card-body">
-          <h5 className="card-title">Primary card title</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </p>
-        </div>
+    <div 
+      className="card"
+      style={{
+        width: "100%",
+        maxWidth: "250px",
+        backgroundColor: "#e1e29aff",
+        borderRadius: "10px",
+        padding: "15px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        textAlign: "center"
+      }}
+    >
+      
+      {/* Image controlled size */}
+      <img
+        src={photo}
+        alt={heading}
+        style={{
+          width: "90px",
+          height: "90px",
+          objectFit: "contain",
+          marginBottom: "10px"
+        }}
+      />
+
+      <div className="card-body" style={{ padding: 0 }}>
+        <h5 className="card-title" style={{ marginBottom: "5px" }}>
+          {heading}
+        </h5>
+
+        <p className="card-text" style={{ fontSize: "20px", fontWeight: "bold" }}>
+          {value}
+        </p>
       </div>
+
     </div>
   );
 }
