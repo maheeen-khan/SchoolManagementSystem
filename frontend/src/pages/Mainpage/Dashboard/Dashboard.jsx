@@ -4,7 +4,7 @@ import student from '../../../assets/students.png';
 import teacher from '../../../assets/teacher.png';
 import BarChart from '../../../componenets/Charts/BarChart';
 import PieChart from '../../../componenets/Charts/PieChart';
-import './Dashboard.css';
+import './Dashboard.css'; // your CSS
 
 function Dashboard() {
   return (
@@ -19,27 +19,22 @@ function Dashboard() {
 
         {/* LEFT COLUMN */}
         <div className="dash-left">
-
-          {/* Cards */}
           <div className="dash-cards">
-            <Cards heading="Teachers" value="100" photo={teacher}/>
-            <Cards heading="Students" value="500" photo={student}/>
+            <Cards heading="Teachers" value="100" photo={teacher} />
+            <Cards heading="Students" value="500" photo={student} />
           </div>
 
-          {/* Bar Chart */}
           <div className="dash-box">
             <BarChart />
           </div>
-
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="dash-box dash-right">
+        <div className="dash-right dash-box">
           <PieChart />
         </div>
 
       </div>
-
     </div>
   );
 }

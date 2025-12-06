@@ -1,6 +1,8 @@
-/* Main page container */
 .dash-container {
   padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto; /* ensure vertical scroll */
 }
 
 /* Title */
@@ -10,65 +12,58 @@
   display: flex;
   align-items: center;
 }
-
 .dash-icon {
   margin-right: 10px;
 }
 
-/* Layout for left + right columns */
+/* Main layout */
 .dash-layout {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap; /* allow stacking on small screens */
 }
 
-/* LEFT COLUMN */
+/* Left column */
 .dash-left {
-  flex: 2;
+  flex: 2 1 600px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  min-width: 300px;
 }
 
-/* Cards row */
+/* Cards */
 .dash-cards {
   display: flex;
   gap: 20px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
-/* Box styling (for charts) */
+/* Chart boxes */
 .dash-box {
   background: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
+  
 
-/* RIGHT COLUMN (Pie chart) */
+/* Right column */
 .dash-right {
-  flex: 1;
-  max-width: 350px;
+  flex: 1 1 300px;
+  min-width: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: fit-content;
 }
 
-
-/* ======== RESPONSIVE MODE ========= */
+/* Responsive */
 @media (max-width: 768px) {
-
-  /* Stack left + right */
   .dash-layout {
     flex-direction: column;
   }
 
   .dash-right {
     max-width: 100%;
-  }
-
-  /* Cards stack */
-  .dash-cards {
-    flex-wrap: wrap;
   }
 
   .dash-cards > * {
