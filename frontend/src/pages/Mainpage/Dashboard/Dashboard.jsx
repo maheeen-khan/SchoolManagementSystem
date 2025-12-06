@@ -10,7 +10,7 @@ function Dashboard() {
   return (
     <div className="dash-container">
 
-      <h1 className="dash-title">
+      <h1 className="main-title">
         <i className="fs-2 bi-house dash-icon"></i>
         Dashboard
       </h1>

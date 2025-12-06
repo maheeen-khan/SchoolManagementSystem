@@ -1,0 +1,12 @@
+.main-title {
+  font-family: George;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}

@@ -5,13 +5,7 @@
   overflow-y: auto; /* ensure vertical scroll */
 }
 
-/* Title */
-.dash-title {
-  font-family: George;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
+
 .dash-icon {
   margin-right: 10px;
 }
