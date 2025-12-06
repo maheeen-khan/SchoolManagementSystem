@@ -13,12 +13,13 @@ function Sidebar() {
   // }, []);
 
   return (
-    <div className="container-fluid" style={{ height: '100vh' }}>
+    <div className="container-fluid" style={{ top:'86px' ,position:"fixed" , height: "calc(100vh - 60px)"}}>
       <div className="row h-100 flex-nowrap">
 
         {/* Sidebar */}
         <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 d-flex flex-column " style={{backgroundColor: "#8fdfc288"}} >
-          <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white h-100">
+          <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white" 
+      >
 
             <Link
               to="/"

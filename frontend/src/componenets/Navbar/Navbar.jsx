@@ -2,7 +2,7 @@ import React from 'react'
 import Logo2 from '../../assets/Logo.png'
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg  " style={{ backgroundColor: "#8fdfc288"}}>
+    <nav className="navbar navbar-expand-lg  " style={{ backgroundColor: "#8fdfc288" }}>
       <div className="container-fluid">
         <a className="navbar-brand" href="#" style={{fontFamily:'fantasy' }}>
           <img src={Logo2} alt="Logo"  style={{ width: "60px", height: "60px", marginRight: "10px" }}/>
