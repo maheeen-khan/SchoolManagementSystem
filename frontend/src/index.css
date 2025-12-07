@@ -1,8 +1,9 @@
 .main-title {
-  font-family: George;
+  font-family: monospace;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  color: #159a84;
 }
 
 .cards {
