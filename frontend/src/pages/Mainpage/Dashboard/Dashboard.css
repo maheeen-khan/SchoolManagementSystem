@@ -1,0 +1,66 @@
+.dash-container {
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto; /* ensure vertical scroll */
+}
+
+
+.dash-icon {
+  margin-right: 10px;
+}
+
+/* Main layout */
+.dash-layout {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* allow stacking on small screens */
+}
+
+/* Left column */
+.dash-left {
+  flex: 2 1 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 300px;
+}
+
+/* Cards */
+.dash-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Chart boxes */
+.dash-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  
+
+/* Right column */
+.dash-right {
+  flex: 1 1 300px;
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dash-layout {
+    flex-direction: column;
+  }
+
+  .dash-right {
+    max-width: 100%;
+  }
+
+  .dash-cards > * {
+    min-width: 100%;
+  }
+}
