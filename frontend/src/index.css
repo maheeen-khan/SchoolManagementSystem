@@ -1,3 +1,4 @@
+
 .main-title {
   font-family: monospace;
   margin-bottom: 20px;
@@ -10,4 +11,31 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+}
+.nav-pills li::before{
+    margin-left: auto;
+}
+
+.nav-pills li::after, .nav-pills li::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #1AB69D;
+  display: block;
+  transition: 1.5s;
+}
+
+.nav-pills li:hover::after{
+  width: 100%;
+}
+.nav-pills .nav-link:hover {
+  color: #159a84 !important;
+}
+.submit{
+  background-color: #c4bd34 !important;
+  color: white !important;
+}
+.submit:hover{
+  background-color: #b3a42e !important;
+  color: white !important;
 }

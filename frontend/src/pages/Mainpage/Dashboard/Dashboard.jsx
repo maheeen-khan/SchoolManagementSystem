@@ -24,7 +24,7 @@ function Dashboard() {
             <Cards heading="Attendance Overview" value="540" photo={attenOverview} colour={"#1AB69D"} />
             <Cards heading="Total No of Students" value="500" photo={student} colour={"#ADA729"} />
             <Cards heading="Total No of Teachers" value="100" photo={teacher} colour={"#1AB69D"} />
-            
+            <Cards heading="Earnings" value="$6000" photo={student} colour={"#ADA729"} />
             
           </div>
 

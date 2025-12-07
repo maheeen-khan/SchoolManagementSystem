@@ -9,11 +9,11 @@ function Layout() {
       
       {/* Navbar on top */}
       <Navbar />
-    <Sidebar/>
+      <Sidebar/>
       {/* Main content area */}
       <div
         style={{
-          marginLeft: "250px",  // match sidebar width
+          // marginLeft: "250px",  // match sidebar width
           padding: "20px",
           overflowY: "auto",
           flex: 1,

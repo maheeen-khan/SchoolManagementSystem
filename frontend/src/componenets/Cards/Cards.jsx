@@ -6,7 +6,7 @@ function Cards({ heading, value, photo, colour }) {
       className="card"
       style={{
         width: "100%",
-        maxWidth: "250px",
+        maxWidth: "270px",
         backgroundColor: colour,
         borderRadius: "10px",
         padding: "15px",
