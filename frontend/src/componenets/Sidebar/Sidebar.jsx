@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Logo2 from '../../assets/Logo.png';
-
+import '../../index.css';
 function Sidebar() {
   return (
     <>
@@ -24,7 +24,7 @@ function Sidebar() {
           className="d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none"
         >
           <img src={Logo2} alt="Logo" width={50} className="me-2" />
-          <span className="fs-4 me-4">EduSphere</span>
+          <span className="fs-4 me-4" style={{color:'#159a84'}}>EduSphere</span>
 
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 

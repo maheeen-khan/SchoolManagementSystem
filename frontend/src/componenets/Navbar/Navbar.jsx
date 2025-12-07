@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo2 from '../../assets/Logo.png'
+import '../../index.css'
 function Navbar({head}) {
   return (
     <nav className="navbar navbar-expand-lg  " style={{ backgroundColor: "#8fdfc288" ,
@@ -20,7 +21,7 @@ function Navbar({head}) {
 
           <form className="d-flex ms-auto" role="search">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success" type="submit">Search</button>
+            <button className="btn submit" type="submit">Search</button>
           </form>
         </div>
       
