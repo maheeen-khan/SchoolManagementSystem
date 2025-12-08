@@ -32,7 +32,7 @@ function Dashboard() {
             <Cards heading="Earnings" value="$6000" photo={student} colour="rgba(219, 223, 98, 0.85)" />
           </div>
 
-          {/* Vertical Bar Chart (Fees Data) */}
+          {/* pie Chart (attendance overview) */}
           <div className="dash-box">
             <PieChart/>
           </div>
@@ -41,14 +41,14 @@ function Dashboard() {
         {/* RIGHT COLUMN */}
         <div className="dash-right">
 
-          {/* Pie Chart */}
-          <div className="dash-box">
-            <VerticalBarChart />
-          </div>
-
-          {/* Horizontal Bar Chart */}
+          {/* Horizontal Chart */}
           <div className="dash-box">
             <HorizontalBarChart />
+          </div>
+
+          {/* Vertical Bar Chart */}
+          <div className="dash-box">
+            <VerticalBarChart />
           </div>
 
         </div>

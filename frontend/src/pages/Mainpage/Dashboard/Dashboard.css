@@ -10,38 +10,58 @@
   margin-right: 10px;
 }
 /* Main layout: 2 columns */
+.dash-container {
+  padding: 20px;
+}
+
+.main-title {
+  font-family: 'George', sans-serif;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.dash-icon {
+  margin-right: 10px;
+}
+
+/* Layout: flex for left + right columns */
 .dash-layout {
   display: flex;
-  gap: 20px;
-  margin-top: 20px;
+  gap: 20px; /* space between left and right */
+  align-items: flex-start; /* align top edges */
 }
 
-/* Left = 50%, Right = 50% */
-.dash-left,
-.dash-right {
-  flex: 1;              /* divides page in half */
+/* LEFT COLUMN */
+.dash-left {
+  flex: 1; /* takes proportional space */
   display: flex;
   flex-direction: column;
-  gap: 20px;            /* space between cards/charts */
+  gap: 20px; /* space between cards and chart */
 }
 
-/* Cards container stays row-based */
 .dash-cards {
-  display: flex;
-  flex-wrap: wrap;       /* prevents overflow */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 15px;
 }
 
-/* Box around charts */
-.dash-box {
-  background: #fff;
-  padding: 10px;
-  
+/* RIGHT COLUMN */
+.dash-right {
+  flex: 2; /* bigger than left if needed */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* space between charts */
 }
 
-
-
-
+/* Chart box */
+.dash-box {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  height: 100%; /* stretch charts if needed */
+}
 
 
 /* Responsive */
