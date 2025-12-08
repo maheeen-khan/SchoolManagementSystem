@@ -21,10 +21,10 @@ function Dashboard() {
         {/* LEFT COLUMN */}
         <div className="dash-left">
           <div className="dash-cards">
-            <Cards heading="Attendance Overview" value="540" photo={attenOverview} colour={"#1AB69D"} />
-            <Cards heading="Total No of Students" value="500" photo={student} colour={"#ADA729"} />
-            <Cards heading="Total No of Teachers" value="100" photo={teacher} colour={"#1AB69D"} />
-            <Cards heading="Earnings" value="$6000" photo={student} colour={"#ADA729"} />
+            <Cards heading="Attendance Overview" value="540" photo={attenOverview} colour={"#38abb869"} />
+            <Cards heading="Total No of Students" value="500" photo={student} colour={"rgba(219, 223, 98, 0.85)"} />
+            <Cards heading="Total No of Teachers" value="100" photo={teacher} colour={"#38abb869"} />
+            <Cards heading="Earnings" value="$6000" photo={student} colour={"rgba(219, 223, 98, 0.85)"} />
             
           </div>
 

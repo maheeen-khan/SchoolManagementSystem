@@ -12,11 +12,11 @@ function Sidebar() {
 
       {/* Offcanvas sidebar */}
       <div
-        className="offcanvas offcanvas-start d-md-flex d-lg-flex flex-column flex-shrink-0 p-3 bg-light"
+        className="offcanvas offcanvas-start d-md-flex d-lg-flex flex-column flex-shrink-0 p-3 "
         tabIndex="-1"
         id="offcanvasSidebar"
         aria-labelledby="offcanvasSidebarLabel"
-        style={{ width: '250px' }}
+        style={{ width: '250px' ,color:'black' }}
       >
         {/* Logo */}
         <Link
@@ -24,7 +24,7 @@ function Sidebar() {
           className="d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none"
         >
           <img src={Logo2} alt="Logo" width={50} className="me-2" />
-          <span className="fs-4 me-4" style={{color:'#159a84'}}>EduSphere</span>
+          <span className="fs-2 me-4" style={{color:'#6a4545a8'}}>EduSphere</span>
 
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 
