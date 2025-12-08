@@ -1,16 +1,21 @@
 import React from 'react';
 import Cards from '../../../componenets/Cards/Cards';
+
 import student from '../../../assets/students.png';
 import teacher from '../../../assets/teacher.png';
 import attenOverview from '../../../assets/atten.png';
-import BarChart from '../../../componenets/Charts/BarChart';
+
+import VerticalBarChart from '../../../componenets/Charts/VerticalBarChart';
+import HorizontalBarChart from '../../../componenets/Charts/HorizontalBarChart';
 import PieChart from '../../../componenets/Charts/PieChart';
-import './Dashboard.css'; // your CSS
+
+import './Dashboard.css';
+import AttendancePieChart from '../../../componenets/Charts/PieChart';
 
 function Dashboard() {
   return (
     <div className="dash-container">
-
+      
       <h1 className="main-title">
         <i className="fs-2 bi-house dash-icon"></i>
         Dashboard
@@ -21,21 +26,31 @@ function Dashboard() {
         {/* LEFT COLUMN */}
         <div className="dash-left">
           <div className="dash-cards">
-            <Cards heading="Attendance Overview" value="540" photo={attenOverview} colour={"#38abb869"} />
-            <Cards heading="Total No of Students" value="500" photo={student} colour={"rgba(219, 223, 98, 0.85)"} />
-            <Cards heading="Total No of Teachers" value="100" photo={teacher} colour={"#38abb869"} />
-            <Cards heading="Earnings" value="$6000" photo={student} colour={"rgba(219, 223, 98, 0.85)"} />
-            
+            <Cards heading="Attendance Overview" value="540" photo={attenOverview} colour="#38abb869" />
+            <Cards heading="Total Students" value="500" photo={student} colour="rgba(219, 223, 98, 0.85)" />
+            <Cards heading="Total Teachers" value="100" photo={teacher} colour="#38abb869" />
+            <Cards heading="Earnings" value="$6000" photo={student} colour="rgba(219, 223, 98, 0.85)" />
           </div>
 
+          {/* Vertical Bar Chart (Fees Data) */}
           <div className="dash-box">
-            <BarChart />
+            <PieChart/>
           </div>
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="dash-right dash-box">
-          <PieChart />
+        <div className="dash-right">
+
+          {/* Pie Chart */}
+          <div className="dash-box">
+            <VerticalBarChart />
+          </div>
+
+          {/* Horizontal Bar Chart */}
+          <div className="dash-box">
+            <HorizontalBarChart />
+          </div>
+
         </div>
 
       </div>

@@ -9,49 +9,40 @@
 .dash-icon {
   margin-right: 10px;
 }
-
-/* Main layout */
+/* Main layout: 2 columns */
 .dash-layout {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap; /* allow stacking on small screens */
+  margin-top: 20px;
 }
 
-/* Left column */
-.dash-left {
-  flex: 2 1 600px;
+/* Left = 50%, Right = 50% */
+.dash-left,
+.dash-right {
+  flex: 1;              /* divides page in half */
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  /* min-width: 300px; */
-  width: 100% !important;
+  gap: 20px;            /* space between cards/charts */
 }
 
-/* Cards */
+/* Cards container stays row-based */
 .dash-cards {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-wrap: wrap;       /* prevents overflow */
+  gap: 15px;
 }
 
-/* Chart boxes */
+/* Box around charts */
 .dash-box {
   background: #fff;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 10px;
   
 }
-/* Right column */
-.dash-right {
-  flex: 1 1 300px;
-  /* min-width: 250px; */
-  min-width: 100% !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: fit-content;
-}
+
+
+
+
+
 
 /* Responsive */
 @media (max-width: 768px) {
