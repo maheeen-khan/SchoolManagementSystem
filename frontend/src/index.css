@@ -4,7 +4,7 @@
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  color: #159a84;
+  color: #397067;
 }
 
 .cards {
@@ -20,7 +20,7 @@
   content: '';
   width: 0%;
   height: 2px;
-  background: #1AB69D;
+  background: #13241e88;
   display: block;
   transition: 1.5s;
 }
@@ -29,13 +29,16 @@
   width: 100%;
 }
 .nav-pills .nav-link:hover {
-  color: #159a84 !important;
+  color: #2f554fd2 !important;
 }
 .submit{
-  background-color: #c4bd34 !important;
-  color: white !important;
+  background-color: rgba(219, 223, 98, 0.85) !important;
+  font-weight:bolder;
+  color: rgb(255, 255, 255) !important;
+  
 }
 .submit:hover{
-  background-color: #b3a42e !important;
+  background-color: rgb(190, 147, 56) !important;
   color: white !important;
+  box-shadow: 0 4px 6px rgba(10, 10, 17, 0.72)
 }

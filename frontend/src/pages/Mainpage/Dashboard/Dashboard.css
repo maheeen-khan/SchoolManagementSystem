@@ -9,49 +9,60 @@
 .dash-icon {
   margin-right: 10px;
 }
-
-/* Main layout */
-.dash-layout {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap; /* allow stacking on small screens */
-}
-
-/* Left column */
-.dash-left {
-  flex: 2 1 600px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  /* min-width: 300px; */
-  width: 100% !important;
-}
-
-/* Cards */
-.dash-cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-/* Chart boxes */
-.dash-box {
-  background: #fff;
+/* Main layout: 2 columns */
+.dash-container {
   padding: 20px;
-  border-radius: 8px;
-  
 }
-/* Right column */
-.dash-right {
-  flex: 1 1 300px;
-  /* min-width: 250px; */
-  min-width: 100% !important;
+
+.main-title {
+  font-family: 'George', sans-serif;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: fit-content;
 }
+
+.dash-icon {
+  margin-right: 10px;
+}
+
+/* Layout: flex for left + right columns */
+.dash-layout {
+  display: flex;
+  gap: 20px; /* space between left and right */
+  align-items: flex-start; /* align top edges */
+}
+
+/* LEFT COLUMN */
+.dash-left {
+  flex: 1; /* takes proportional space */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* space between cards and chart */
+}
+
+.dash-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+/* RIGHT COLUMN */
+.dash-right {
+  flex: 2; /* bigger than left if needed */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* space between charts */
+}
+
+/* Chart box */
+.dash-box {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  height: 100%; /* stretch charts if needed */
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
