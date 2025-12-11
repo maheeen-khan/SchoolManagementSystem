@@ -1,5 +1,5 @@
 import React from 'react'
-import Cards from '../../componenets/Cards/Cards'
+import Cards from '../../componenets/Cards/Cards.jsx'
 import UpdateTeacher from '../../assets/UpdateTeacher.png'
 import TeacherDataTable from '../../componenets/Table/TeacherDataTable/TeachersDataTble';
 

@@ -3,6 +3,7 @@
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  color: #1AB69D !important;
 }
 
 .cards {
@@ -20,32 +21,28 @@
   content: '';
   width: 0%;
   height: 2px;
-  background: #1AB69D;           /* Nice teal-green underline (looks modern & matches your theme) */
+  background: #1AB69D; 
   display: block;
-  transition: width 1.5s ease;
+  transition: 1.9s ease;
 }
 
-.nav-pills li:hover::after,
-.nav-pills li:hover::before {
+.nav-pills li:hover::after{
   width: 100%;
 }
 
 .nav-pills .nav-link:hover {
-  color: #159a84 !important;     /* Matches the underline color perfectly */
+  color: #1AB69D !important;    /* Matches the underline color perfectly */
 }
 
-/* Submit button – your golden/yellow style is way prettier than the old one */
 .submit {
   background-color: rgba(219, 223, 98, 0.95) !important;
   font-weight: bolder !important;
   color: white !important;
-  border: none !important;
   transition: all 0.3s ease !important;
 }
 
 .submit:hover {
-  background-color: #b89b2e !important;   /* Richer golden hover */
   color: white !important;
-  box-shadow: 0 6px 12px rgba(10, 10, 17, 0.5) !important;
-  transform: translateY(-2px);
+  background-color: rgba(208, 212, 94, 0.95) !important;
+
 }
