@@ -84,6 +84,11 @@ function Sidebar() {
               <i className="bi bi-list-stars me-2"></i> Certificate
             </Link>
           </li>
+           <li>
+            <Link to="/Classes" className="nav-link text-dark">
+              <i className="bi bi-list-stars me-2"></i> Classes
+            </Link>
+          </li>
         </ul>
 
         <hr />
