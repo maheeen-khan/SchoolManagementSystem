@@ -1,10 +1,8 @@
-
 .main-title {
   font-family: monospace;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  color: #397067;
 }
 
 .cards {
@@ -12,33 +10,42 @@
   gap: 20px;
   flex-wrap: wrap;
 }
-.nav-pills li::before{
-    margin-left: auto;
+
+.nav-pills li::before {
+  margin-left: auto;
 }
 
-.nav-pills li::after, .nav-pills li::before {
+.nav-pills li::after,
+.nav-pills li::before {
   content: '';
   width: 0%;
   height: 2px;
-  background: #13241e88;
+  background: #1AB69D;           /* Nice teal-green underline (looks modern & matches your theme) */
   display: block;
-  transition: 1.5s;
+  transition: width 1.5s ease;
 }
 
-.nav-pills li:hover::after{
+.nav-pills li:hover::after,
+.nav-pills li:hover::before {
   width: 100%;
 }
+
 .nav-pills .nav-link:hover {
-  color: #2f554fd2 !important;
+  color: #159a84 !important;     /* Matches the underline color perfectly */
 }
-.submit{
-  background-color: rgba(219, 223, 98, 0.85) !important;
-  font-weight:bolder;
-  color: rgb(255, 255, 255) !important;
-  
-}
-.submit:hover{
-  background-color: rgb(190, 147, 56) !important;
+
+/* Submit button – your golden/yellow style is way prettier than the old one */
+.submit {
+  background-color: rgba(219, 223, 98, 0.95) !important;
+  font-weight: bolder !important;
   color: white !important;
-  box-shadow: 0 4px 6px rgba(10, 10, 17, 0.72)
+  border: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.submit:hover {
+  background-color: #b89b2e !important;   /* Richer golden hover */
+  color: white !important;
+  box-shadow: 0 6px 12px rgba(10, 10, 17, 0.5) !important;
+  transform: translateY(-2px);
 }
