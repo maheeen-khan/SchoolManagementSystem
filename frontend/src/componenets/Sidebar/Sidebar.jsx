@@ -21,10 +21,10 @@ function Sidebar() {
         {/* Logo */}
         <Link
           to="/"
-          className="d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none"
+          className="d-flex align-items-center align-content-center justify-content-center mb-md-0 me-md-auto text-decoration-none"
         >
           <img src={Logo2} alt="Logo" width={50} className="me-2" />
-          <span className="fs-2 me-4" style={{color:'#6a4545a8'}}>EduSphere</span>
+          <span className="fs-4 mt-3 me-3 main-title">EduSphere</span>
 
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 

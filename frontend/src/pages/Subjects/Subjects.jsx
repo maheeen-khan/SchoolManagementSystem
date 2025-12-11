@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { ArrowLeft } from "react-bootstrap-icons";
+// import { ArrowLeft } from "react-bootstrap-icons";
 
 const Subjects = () => {
   const { classId } = useParams();
