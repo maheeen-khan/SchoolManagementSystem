@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import 'dotenv/config';
 
 const db = 'schoolManagement';
-const url = `${process.env.MONGODB_URL}/${db}`
+const url = `${process.env.MONGODB_URL}${db}`
 
 const connectToDB=async()=>{
     mongoose.connection.on("open", () => {
