@@ -18,9 +18,9 @@ function Teacher() {
         <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
         </svg>Teacher Data</h1>
       <div className='cards'>
-         <Cards heading="Add Teacher" value="" photo={UpdateTeacher} />
-         <Cards heading="Delete Teacher " value="" photo={UpdateTeacher} />
-         <Cards heading="Update Teacher Data" value ="" photo={UpdateTeacher}/>
+         <Cards heading="Add Teacher" value="" photo={UpdateTeacher} colour="#38abb869" />
+         <Cards heading="Delete Teacher " value="" photo={UpdateTeacher} colour="#38abb869"/>
+         <Cards heading="Update Teacher Data" value ="" photo={UpdateTeacher} colour="#38abb869"/>
       </div>
       <h1 className='main-title' style={{paddingTop:"50px"}}>Teachers Data</h1>
       <TeacherDataTable data={teachers} />

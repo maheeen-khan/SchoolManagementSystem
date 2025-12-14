@@ -21,9 +21,9 @@ function Student() {
         </svg>
         Student</h1>
       <div className="cards">
-         <Cards heading="Add Student" value="" photo={AddStudent} />
-         <Cards heading="Delete Student" value="" photo={DeleteStudent} />
-         <Cards heading="Update Student Data" value ="" photo={UpdateStudent}/>
+         <Cards heading="Add Student" value="" photo={AddStudent} colour="#38abb869"/>
+         <Cards heading="Delete Student" value="" photo={DeleteStudent} colour="#38abb869"/>
+         <Cards heading="Update Student Data" value ="" photo={UpdateStudent} colour="#38abb869"/>
       </div>
       <h1 className='main-title' style={{paddingTop:"50px"}}>Students Data</h1>
       <StudentDataTable data={students} />

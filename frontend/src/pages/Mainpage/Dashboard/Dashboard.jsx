@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import Cards from '../../../componenets/Cards/Cards';
 
@@ -21,10 +23,10 @@ function Dashboard() {
         Dashboard
       </h1>
 
-      <div className="dash-layout">
+      
 
-        {/* LEFT COLUMN */}
-        <div className="dash-left">
+      
+        
           <div className="dash-cards">
             <Cards heading="Attendance Overview" value="540" photo={attenOverview} colour="#38abb869" />
             <Cards heading="Total Students" value="500" photo={student} colour="rgba(219, 223, 98, 0.85)" />
@@ -32,29 +34,15 @@ function Dashboard() {
             <Cards heading="Earnings" value="$6000" photo={student} colour="rgba(219, 223, 98, 0.85)" />
           </div>
 
-          {/* pie Chart (attendance overview) */}
-          <div className="dash-box">
-            <PieChart/>
-          </div>
-        </div>
-
-        {/* RIGHT COLUMN */}
-        <div className="dash-right">
-
-          {/* Horizontal Chart */}
-          <div className="dash-box">
-            <HorizontalBarChart />
-          </div>
-
-          {/* Vertical Bar Chart */}
-          <div className="dash-box">
-            <VerticalBarChart />
-          </div>
+          <HorizontalBarChart/>
+          <VerticalBarChart/>
+          <AttendancePieChart/>
+          
 
         </div>
 
-      </div>
-    </div>
+     
+    
   );
 }
 
