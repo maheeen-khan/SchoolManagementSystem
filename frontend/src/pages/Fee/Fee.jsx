@@ -1,4 +1,3 @@
-import React from 'react'
 import StudentDataTable from '../../componenets/Table/StudentDataTable/StudentDataTable'
 import VerticalBarChart from '../../componenets/Charts/VerticalBarChart'
 const students = [
@@ -40,7 +39,7 @@ const Fee = () => {
 
   return (
     <div>
-      <h1 className='main-title'><i className="bi bi-receipt me-2"></i>Fees Overview</h1>
+      <h1 className='main-title mt-4'><i className="bi bi-receipt me-2"></i>Fees Overview</h1>
       <VerticalBarChart/>
     
       <h1 className='main-title'>Student Fees Status </h1>
@@ -150,8 +149,10 @@ const Fee = () => {
           </div>
         </Card.Body>
       </Card>
-    </div>
-  );
-};
+    </div>   {/* closes styled div */}
 
+  </div>     
+
+);
+}
 export default Fee;

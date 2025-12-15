@@ -41,7 +41,7 @@ function HorizontalBarChart() {
           {/* HEADER */}
           <div className="d-flex align-items-center justify-content-between mb-3 flex-wrap">
             <h5 className="card-title mb-2" style={{ fontSize: fontSize + 2 }}>
-              Employees By Subjects
+              Teachers By Subjects
             </h5>
 
             {/* Responsive select instead of button */}
