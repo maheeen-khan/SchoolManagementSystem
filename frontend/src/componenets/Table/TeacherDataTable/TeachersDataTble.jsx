@@ -1,34 +1,24 @@
-// TeacherTable.jsx
 import React from "react";
-
+import './TeacherDataTable.css'
 function TeacherDataTable({ data }) {
   return (
-    <div style={{ padding: "20px", overflowX: "auto" }}>
-      <table style={{ width: "100%", borderCollapse: "separate", borderSpacing: "0 10px" }}>
+    <div className="table-responsive">
+      <table className="table table-striped table-hover">
         <thead>
           <tr>
-            <th style={{ textAlign: "left", padding: "8px" }}>ID</th>
-            <th style={{ textAlign: "left", padding: "8px" }}>Name</th>
-            <th style={{ textAlign: "left", padding: "8px" }}>Class Assigned</th>
-            <th style={{ textAlign: "left", padding: "8px" }}>Attendance</th>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Class</th>
+            <th scope="col">Attendance</th>
           </tr>
         </thead>
         <tbody>
           {data.map((teacher) => (
-            <tr
-              key={teacher.id}
-              style={{
-                boxShadow: "0 2px 5px rgba(0,0,0,0.15)",
-                borderRadius: "8px",
-                backgroundColor: "white",
-                marginBottom: "10px",
-                display: "table-row",
-              }}
-            >
-              <td style={{ padding: "12px" }}>{teacher.id}</td>
-              <td style={{ padding: "12px" }}>{teacher.name}</td>
-              <td style={{ padding: "12px" }}>{teacher.classAssigned}</td>
-              <td style={{ padding: "12px" }}>{teacher.attendance}</td>
+            <tr key={teacher.id}>
+              <th scope="row">{teacher.id}</th>
+              <td>{teacher.name}</td>
+              <td>{teacher.classAssigned}</td>
+              <td>{teacher.attendance}</td>
             </tr>
           ))}
         </tbody>

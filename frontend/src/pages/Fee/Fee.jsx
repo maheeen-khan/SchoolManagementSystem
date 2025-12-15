@@ -1,3 +1,11 @@
+import React from 'react'
+import StudentDataTable from '../../componenets/Table/StudentDataTable/StudentDataTable'
+import VerticalBarChart from '../../componenets/Charts/VerticalBarChart'
+const students = [
+  { rollNo: 1, className: "10-A", name: "Ali", feesStatus: "Paid" },
+  { rollNo: 2, className: "10-B", name: "Sara", feesStatus: "Pending" },
+  { rollNo: 3, className: "9-C", name: "Ahmed", feesStatus: "Paid" },
+];
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Card from "react-bootstrap/Card";
@@ -31,6 +39,12 @@ const Fee = () => {
   const totalDue = feeRecords.reduce((sum, r) => sum + (r.monthlyFee - r.paid), 0);
 
   return (
+    <div>
+      <h1 className='main-title'><i className="bi bi-receipt me-2"></i>Fees Overview</h1>
+      <VerticalBarChart/>
+    
+      <h1 className='main-title'>Student Fees Status </h1>
+      <StudentDataTable data={students}/>
     <div style={{ padding: "2rem", backgroundColor: "#f8fff9", minHeight: "100vh" }}>
       {/* Header */}
       <div className="d-flex justify-content-between align-items-center mb-4">

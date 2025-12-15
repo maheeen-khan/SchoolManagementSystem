@@ -1,10 +1,11 @@
-import React from 'react'
+
+import React, { useState } from "react";
 import Cards from '../../componenets/Cards/Cards'
 import AddStudent from '../../assets/AddStudent.png'
 import DeleteStudent from '../../assets/DeleteStudent.png'
 import UpdateStudent from '../../assets/UpdateStudent.png'
 import StudentDataTable from '../../componenets/Table/StudentDataTable/StudentDataTable'
-
+import Modal from '../../componenets/Modal(Popup_Window)/Modal'
 const students = [
   { rollNo: 1, className: "10-A", name: "Ali", feesStatus: "Paid" },
   { rollNo: 2, className: "10-B", name: "Sara", feesStatus: "Pending" },
@@ -12,6 +13,8 @@ const students = [
 ];
 
 function Student() {
+ 
+  const [activeModal, setActiveModal] = useState(null);
   return (
     <div>
       <h1 className='main-title'>
@@ -21,9 +24,139 @@ function Student() {
         </svg>
         Student</h1>
       <div className="cards">
-         <Cards heading="Add Student" value="" photo={AddStudent} />
-         <Cards heading="Delete Student" value="" photo={DeleteStudent} />
-         <Cards heading="Update Student Data" value ="" photo={UpdateStudent}/>
+         <Cards heading="Add Student" value="" photo={AddStudent} colour="#38abb869" onClick={() => setActiveModal("add")} />
+          <Modal
+       show={activeModal === "add"}
+       onClose={() => setActiveModal(null)}
+        title="Add Student"
+        footer={
+          <>
+            <button
+              className="btn btn-secondary"
+              onClick={() => setShowModal(false)}
+            >
+              Close
+            </button>
+            <button className="btn btn-primary">
+              Submit
+            </button>
+          </>
+        }
+      >
+        {/* Body content injected here */}
+        <form>
+          <div className="mb-3">
+            <label className="form-label">Name</label>
+            <input className="form-control" />
+          </div>
+
+          <div className="mb-3">
+            <label className="form-label">Guardian's Name</label>
+            <input className="form-control" />
+          </div>
+
+          <div className="mb-3">
+            <label className="form-label">Guardian's No</label>
+            <input className="form-control" />
+          </div>
+
+          <div className="mb-3">
+            <label className="form-label">Guardian's Designation</label>
+            <input className="form-control" />
+          </div>
+
+          <div className="mb-3">
+            <label className="form-label">Roll No</label>
+            <input className="form-control" />
+          </div>
+
+          <div className="mb-3">
+            <label className="form-label">Class</label>
+            <input className="form-control" />
+          </div>
+
+        </form>
+      </Modal>
+         <Cards heading="Delete Student" value="" photo={DeleteStudent} colour="#38abb869" onClick={() => setActiveModal("delete")}/>
+         <Modal
+        show={activeModal === "delete"}
+        onClose={() => setActiveModal(null)}
+        title="Delete Student"
+        footer={
+          <>
+            <button
+              className="btn btn-secondary"
+              onClick={() => setShowModal(false)}
+            >
+              Close
+            </button>
+            <button className="btn btn-primary">
+              Delete
+            </button>
+          </>
+        }
+      >
+        {/* Body content injected here */}
+        <form>
+          <div className="mb-3">
+            <label className="form-label">Roll No</label>
+            <input className="form-control" />
+          </div>
+        </form>
+      </Modal>
+         <Cards heading="Update Student Data" value ="" photo={UpdateStudent} colour="#38abb869" onClick={() => setActiveModal("update")}/>
+         <Modal
+       show={activeModal === "update"}
+       onClose={() => setActiveModal(null)}
+        title="Update Student Data"
+        footer={
+          <>
+            <button
+              className="btn btn-secondary"
+              onClick={() => setShowModal(false)}
+            >
+              Close
+            </button>
+            <button className="btn btn-primary">
+              Submit
+            </button>
+          </>
+        }
+      >
+        {/* Body content injected here */}
+        <form>
+          <div className="mb-3">
+            <label className="form-label">Name</label>
+            <input className="form-control" />
+          </div>
+
+          <div className="mb-3">
+            <label className="form-label">Guardian's Name</label>
+            <input className="form-control" />
+          </div>
+
+          <div className="mb-3">
+            <label className="form-label">Guardian's No</label>
+            <input className="form-control" />
+          </div>
+
+          <div className="mb-3">
+            <label className="form-label">Guardian's Designation</label>
+            <input className="form-control" />
+          </div>
+
+          <div className="mb-3">
+            <label className="form-label">Roll No</label>
+            <input className="form-control" />
+          </div>
+
+          <div className="mb-3">
+            <label className="form-label">Class</label>
+            <input className="form-control" />
+          </div>
+
+        </form>
+      </Modal>
       </div>
       <h1 className='main-title' style={{paddingTop:"50px"}}>Students Data</h1>
       <StudentDataTable data={students} />

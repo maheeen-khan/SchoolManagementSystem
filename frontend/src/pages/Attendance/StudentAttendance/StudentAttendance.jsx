@@ -1,3 +1,14 @@
+import React from "react";
+
+function StudentAttendance(){
+  return(
+    <div>
+    Studwnt Attendance
+    </div>
+  );
+}
+export default StudentAttendance;
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Card from "react-bootstrap/Card";

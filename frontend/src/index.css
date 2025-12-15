@@ -1,3 +1,16 @@
+/* Global container for page content */
+.page-container {
+  padding: 20px; /* default padding for desktop/tablet */
+  
+}
+
+/* Remove padding on small screens */
+@media (max-width: 576px) {
+  .page-container {
+    padding: 5px !important;
+  }
+}
+
 .main-title {
   font-family: monospace;
   margin-bottom: 20px;
@@ -43,6 +56,49 @@
 
 .submit:hover {
   color: white !important;
+  box-shadow: 0 4px 6px rgba(10, 10, 17, 0.72)
+}
+
+/* Global mobile padding reset */
+@media (max-width: 576px) {
+  body, html {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Dashboard container */
+  .dash-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Cards container */
+  .dash-cards {
+    gap: 10px !important; /* smaller gap on mobile */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Individual cards */
+  .dash-cards > div, .card, .card-body {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  /* Tables */
+  table {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Charts */
+  .chart-container, .widget-card {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
   background-color: rgba(208, 212, 94, 0.95) !important;
 
 }

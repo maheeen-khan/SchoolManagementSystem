@@ -1,80 +1,32 @@
-.dash-container {
-  padding: 20px;
-  min-height: 100vh;
-  box-sizing: border-box;
-  overflow-y: auto; /* ensure vertical scroll */
-}
-
-
-.dash-icon {
-  margin-right: 10px;
-}
-/* Main layout: 2 columns */
-.dash-container {
-  padding: 20px;
-}
-
-.main-title {
-  font-family: 'George', sans-serif;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.dash-icon {
-  margin-right: 10px;
-}
-
-/* Layout: flex for left + right columns */
-.dash-layout {
-  display: flex;
-  gap: 20px; /* space between left and right */
-  align-items: flex-start; /* align top edges */
-}
-
-/* LEFT COLUMN */
-.dash-left {
-  flex: 1; /* takes proportional space */
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* space between cards and chart */
-}
-
+/* Container for cards */
 .dash-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 15px;
-}
-
-/* RIGHT COLUMN */
-.dash-right {
-  flex: 2; /* bigger than left if needed */
   display: flex;
-  flex-direction: column;
-  gap: 20px; /* space between charts */
+  gap: 15px; /* space between cards */
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  margin-bottom: 20px;
 }
 
-/* Chart box */
-.dash-box {
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  height: 100%; /* stretch charts if needed */
+/* Card flex for large screens: 4 in a row */
+@media (min-width: 992px) {
+  .dash-cards {
+    flex-wrap: nowrap; /* force single row */
+  }
+  .dash-cards > div {
+    flex: 1 1 0; /* evenly distributed in one row */
+    max-width: none; /* remove max-width restrictions */
+  }
 }
 
-
-/* Responsive */
-@media (max-width: 768px) {
-  .dash-layout {
-    flex-direction: column;
+/* Card flex for medium screens: 2 per row */
+@media (min-width: 577px) and (max-width: 991px) {
+  .dash-cards > div {
+    flex: 1 1 calc(50% - 15px); /* 2 cards per row */
   }
+}
 
-  .dash-right {
-    max-width: 100%;
-  }
-
-  .dash-cards > * {
-    min-width: 100%;
+/* Mobile screens: 1 per row */
+@media (max-width: 576px) {
+  .dash-cards > div {
+    flex: 1 1 100%; /* 1 card per row */
   }
 }
