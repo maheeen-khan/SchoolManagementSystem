@@ -1,9 +1,10 @@
 import React from 'react';
 
-function Cards({ heading, value, photo, colour }) {
+function Cards({ heading, value, photo, colour , onClick}) {
   return (
     <div 
       className="card"
+      onClick={onClick}
       style={{
         width: "100%",
         maxWidth: "270px",

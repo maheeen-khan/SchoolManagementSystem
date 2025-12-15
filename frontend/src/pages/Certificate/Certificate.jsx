@@ -5,9 +5,9 @@ const Certificate = () => {
   return (
     <div>
       <div className='cards' >
-      <Cards heading="Generate Bonafide Certificate" value="" photo={certificate} />
-      <Cards heading="Generate Leaving Certificate" value="" photo={certificate} />
-      <Cards heading="Generate Character Certificate" value="" photo={certificate} />
+      <Cards heading="Generate Bonafide Certificate" value="" photo={certificate} colour="#38abb869" />
+      <Cards heading="Generate Leaving Certificate" value="" photo={certificate} colour="#38abb869"/>
+      <Cards heading="Generate Character Certificate" value="" photo={certificate} colour="#38abb869"/>
       
       </div>
     </div>
