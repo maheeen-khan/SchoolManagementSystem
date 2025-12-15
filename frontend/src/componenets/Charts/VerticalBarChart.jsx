@@ -25,7 +25,8 @@ function MonthlyRevenueChart() {
   <ResponsiveContainer width="100%" height="85%"> 
     <BarChart
       data={monthlyRevenueData}
-      margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+      margin={{ top: 20, bottom: 5 }}
+      className="p-3"
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="month" />

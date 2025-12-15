@@ -10,8 +10,8 @@ import Teacher from './pages/Teacher/Teacher';
 import Classes from './pages/Classes/Classes';
 import Subjects from './pages/Subjects/Subjects';
 import SubjectDetail from './pages/SubjectDetail/SubjectDetail';
-
-
+import SignUp from './pages/Authentication/signup';
+import Login from './pages/Authentication/Login';
 import AppRoute from './routes/AppRoute';
 import { Routes, Route } from "react-router-dom";
 function App() {
@@ -19,6 +19,8 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/" element={<AppRoute/>}>
              <Route index element={<Dashboard />} />
              <Route path="Students" element={<Student/>}/> 

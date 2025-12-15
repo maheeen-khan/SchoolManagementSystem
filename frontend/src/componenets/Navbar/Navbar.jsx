@@ -17,9 +17,13 @@ function Navbar({head}) {
         <i className="bi bi-list"></i>
       </button>
 
-      {head ? <h3 className="ms-3 mt-2">{head}</h3> : <img src={Logo2} alt="Logo" style={{ height: '40px', marginLeft: '10px' }} />}
+      <h3 className="me-auto mt-2">
+        <img src={Logo2} alt="Logo" style={{ height: '40px', marginLeft: '10px' }} /> 
+       
+       <span className='ms-2 fs-4' style={{color:'darkblue', fontFamily:'monospace'}}>EduSphere</span> 
+      </h3>
 
-          <form className="d-flex ms-auto" role="search">
+          <form className="d-flex mx-auto mx-md-0" role="search">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
             <button className="btn submit" type="submit">Search</button>
           </form>
