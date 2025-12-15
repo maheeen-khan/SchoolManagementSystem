@@ -21,10 +21,10 @@ function Sidebar() {
         {/* Logo */}
         <Link
           to="/"
-          className="d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none"
+          className="d-flex align-items-center align-content-center justify-content-center mb-md-0 me-md-auto text-decoration-none"
         >
           <img src={Logo2} alt="Logo" width={50} className="me-2" />
-          <span className="fs-2 me-4" style={{color:'#6a4545a8'}}>EduSphere</span>
+          <span className="fs-4 mt-3 me-3 main-title">EduSphere</span>
 
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 
@@ -82,6 +82,11 @@ function Sidebar() {
           <li>
             <Link to="/Certificate" className="nav-link text-dark">
               <i className="bi bi-list-stars me-2"></i> Certificate
+            </Link>
+          </li>
+           <li>
+            <Link to="/Classes" className="nav-link text-dark">
+              <i className="bi bi-list-stars me-2"></i> Classes
             </Link>
           </li>
         </ul>
