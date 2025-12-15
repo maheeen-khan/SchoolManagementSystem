@@ -24,7 +24,7 @@ function Student() {
         </svg>
         Student</h1>
       <div className="cards">
-         <Cards heading="Add Student" value="120" photo={AddStudent} colour="#38abb869" onClick={() => setActiveModal("add")} />
+         <Cards heading="Add Student" value="" photo={AddStudent} colour="#38abb869" onClick={() => setActiveModal("add")} />
           <Modal
        show={activeModal === "add"}
        onClose={() => setActiveModal(null)}
