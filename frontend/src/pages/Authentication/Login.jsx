@@ -34,7 +34,7 @@ const Login = () => {
             setTimeout(() => {
                 setLoading(false)
                 window.location.href = "/";
-            }, 20000);
+            }, 2000);
 
         } catch (error) {
             console.log(error.response.data.message);
