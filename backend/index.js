@@ -11,7 +11,7 @@ import User from './models/user.model.mjs'
 import connectToDB from './db/dbConnection.mjs'
 import studentRoutes from './routes/studentRoutes.mjs'
 import teacherRoutes from './routes/teacherRoutes.mjs'
-// import userRoutes from './routes/userRoutes.mjs'
+import userRoutes from './routes/userRoutes.mjs'
 
 connectToDB()
 
@@ -22,7 +22,7 @@ app.use(cors());
 
 app.use(express.json());
 
-// app.use("/api/auth",userRoutes)
+app.use("/api/auth",userRoutes);
 app.use("/api/students",studentRoutes);
 app.use("/api/teachers",teacherRoutes);
 

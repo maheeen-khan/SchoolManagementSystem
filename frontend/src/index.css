@@ -169,6 +169,17 @@
   border: none;
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 }   
+.logout{
+  border: 2px solid white !important;
+  font-weight: bolder !important;
+  color: white !important;
+  transition: all 0.3s ease !important;
+}
+.logout:hover {
+  background-color: white !important;
+  color: rgba(190, 194, 81, 0.95) !important;
+  transition: all 0.9s ease !important;
+}
 /* Global mobile padding reset */
 @media (max-width: 576px) {
   body, html {

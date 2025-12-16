@@ -14,7 +14,7 @@ const login = async (req, res) => {
       const checkPassword = bcrypt.compareSync(password, user.password);
 
       if (checkPassword) {
-        var token = JWT.sign({ userId: user._id }, process.env.JWT_SECRET);
+        var token = JWT.sign({ userId: user._id }, process.env.JWT_TOKEN);
 
         res
           .status(200)
@@ -35,7 +35,7 @@ const login = async (req, res) => {
 const signUp = async (req, res) => {
   
   if (!req.body) {
-    return req.status(400).json({ message: "Bad request! Empty request" });
+    return req.status(400).json({ message: "Bad request! Empty body" });
   }
   try {
     // const user = await userSchema.validateAsync(req.body);
