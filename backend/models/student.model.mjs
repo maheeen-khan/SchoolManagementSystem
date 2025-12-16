@@ -25,10 +25,6 @@ const studentSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    enrollmentDate: {
-    type: Date,
-    default: Date.now
-  }
     
 
 },{timestamps:true})
