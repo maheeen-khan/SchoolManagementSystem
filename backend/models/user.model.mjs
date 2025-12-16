@@ -3,19 +3,25 @@ import 'dotenv/config';
 import connectToDB from "../db/dbConnection.mjs";
 
 const userSchema = new mongoose.Schema({
-    
-    username:{
+
+    email: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        lowercase: true,
+        trim: true,
+        match: [
+            /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
+            'Please enter a valid email address'
+        ]
     },
-    password:{
+    password: {
         type: String,
         required: true
     },
-    
 
-},{timestamps:true})
+
+}, { timestamps: true })
 
 const User = mongoose.model('User', userSchema)
 export default User 

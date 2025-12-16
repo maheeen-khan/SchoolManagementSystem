@@ -6,7 +6,7 @@ import Fee from './pages/Fee/Fee';
 import Dashboard from './pages/Mainpage/Dashboard/Dashboard'
 import Student from './pages/Student/Student';
 import Teacher from './pages/Teacher/Teacher';
-
+import PrivateRoute from './routes/PrivateRoute';
 import Classes from './pages/Classes/Classes';
 import Subjects from './pages/Subjects/Subjects';
 import SubjectDetail from './pages/SubjectDetail/SubjectDetail';
@@ -21,19 +21,19 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/" element={<AppRoute/>}>
+        <Route path="/" element={<PrivateRoute><AppRoute/></PrivateRoute>}>
              <Route index element={<Dashboard />} />
-             <Route path="Students" element={<Student/>}/> 
-             <Route path="Teachers" element={<Teacher/>}/>
-             <Route path="Teachers_Attendance" element={<TeacherAttendance/>}/>
-             <Route path="Students_Attendance" element={<StudentAttendance/>}/>
-             <Route path="Fee" element={<Fee/>}/>
-             <Route path="Certificate" element={<Certificate/>}/>
+             <Route path="Students" element={<PrivateRoute><Student/></PrivateRoute>}/> 
+             <Route path="Teachers" element={<PrivateRoute><Teacher/></PrivateRoute>}/>
+             <Route path="Teachers_Attendance" element={<PrivateRoute><TeacherAttendance/></PrivateRoute>}/>
+             <Route path="Students_Attendance" element={<PrivateRoute><StudentAttendance/></PrivateRoute>}/>
+             <Route path="Fee" element={<PrivateRoute><Fee/></PrivateRoute>}/>
+             <Route path="Certificate" element={<PrivateRoute><Certificate/></PrivateRoute>}/>
 
-             <Route path="Classes" element={<Classes />} />
+             <Route path="Classes" element={<PrivateRoute><Classes /></PrivateRoute>} />
              <Route path="subjects/:classId" element={<Subjects />} />
              <Route path="subject-detail/:classId/:subjectId" element={<SubjectDetail />} />
-             <Route path="/attendance" element={<StudentAttendance />} />
+             <Route path="/attendance" element={<PrivateRoute><StudentAttendance /></PrivateRoute>} />
 
              
         </Route>

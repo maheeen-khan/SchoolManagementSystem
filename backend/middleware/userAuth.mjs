@@ -3,7 +3,10 @@ import joi from "joi"
 const signupValidation = (req, res, next) => {
 
     const userSchema = joi.object({
-        username: joi.string().min(3).max(15).required(),
+        email: joi.string()
+            .email({ tlds: { allow: false } })
+            .required(),
+
         password: joi.string().min(6).max(15).required()
     }).unknown(true) // ignore extra fields
 
@@ -18,7 +21,10 @@ const signupValidation = (req, res, next) => {
 const loginValidation = (req, res, next) => {
 
     const userSchema = joi.object({
-        username: joi.string().min(3).max(15).required(),
+        email: joi.string()
+            .email({ tlds: { allow: false } })
+            .required(),
+
         password: joi.string().min(6).max(15).required()
     }).unknown(true) // ignore extra fields
 
@@ -29,4 +35,4 @@ const loginValidation = (req, res, next) => {
     next()
 }
 
-export {signupValidation, loginValidation};
+export { signupValidation, loginValidation };
